@@ -10,13 +10,11 @@
 # word = input('please enter word : ')
 # reversed_word = word[::-1]
 # print(f"{word} is a palindrome : {word ==reversed_word}")
-
-# name = ["Shade", "Muyiwa", "Tayo", "Kemi"]
-# m = ["Mr"]
-# f = ["Mrs"]
-# mapped = map(lambda x :  +x, name)
-# print(list(mapped))
-
+        # ASSIGNMENT 1
+# names = [("Shade", "f"), ("Muyiwa","m"),("Tayo","m"), ("Kemi","f")]
+# saluted_names = map(lambda x : " Mr " +x[0] if x [1] == "m" else " Mrs " +x[0], names)
+# print(list(saluted_names))
+        # ASSIGNMENT 2
 # three_friends = ["Shola", "Ayo", "Tunde"]
 # friends_no = (len(three_friends))
 # candies = int(input("number of candies : "))
@@ -24,3 +22,12 @@
 # remainder = int(candies % 3)
 # statement = f'number of candy to be shared is : {g}\nnumber of candies to be crushed : {remainder}'
 # print(statement)
+        # ASSIGNMENT 3
+# import random
+# dice1 = random.randint (1,6)
+# dice2 = random.randint (1,6)
+
+# if (dice1 ==6) & (dice2 ==5) :
+#     print("you won")
+# else :
+#     print("try again")
