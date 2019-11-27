@@ -161,11 +161,10 @@
 # print(1,2,3,sep = "\n")
 # print("new line")
 
-# file = open("my_data.csv", 'a')
+# file = open("my_data.csv", '')
 # print("name","age","state","due", file = file,sep =",")
 # print("ade","20","osun_state","20000", file = file,sep =",")
-
-# file = open("my_data.csv", 'a')
+# file = open("my_data.csv", 'w')
 # details = input("insert your details in this format Name,Age,State,Due : ")
 # splitted_details = details.split(",")
 # print(splitted_details[0],splitted_details[1],splitted_details[2],splitted_details[3],file = file,sep =",")
@@ -254,3 +253,79 @@
 # # print(lyrics)
 # print(lyrics.find("Lupita"))
 # print(lyrics.count("skin"))
+
+# if 'foo' in ['foo', 'bar', 'baz']:       
+#     print('Outer condition is true')      
+
+#     if 10 > 20:                           
+#             print('Inner condition 1')        
+
+#     print('Between inner conditions')     
+
+#     if 10 < 20:                          
+#              print('Inner condition 2')       
+
+#     print('End of outer condition')       
+# print('After outer condition')
+
+# behaviour = input("enter good or bad : ")
+# age = int(input("enter your age : "))
+# if behaviour == "good" and age > 18 :
+#     print("you get a game")
+# if behaviour =="good" and age < 18 :
+#     print("you get a pc")
+# if behaviour == "bad" :
+#     print("you are left alone")
+
+# if 'b' in 'bar':
+#     print('foo')
+# elif 1/0:
+#     print("this won't happen")
+# elif 'var':
+#     print("this wont't either")
+
+# score = int(input("enter your score : "))
+# status = 'Yess !!! pass' if score > 50 else 'Aww! fail'
+# print(status) 
+
+# x = 3
+# s = ('foo' if (x == 1) else ('bar' if (x == 2) else ('baz' if (x == 3) else ('qux'if (x == 4) else 'quux'))))
+# print(s)
+
+# question1 = input('Are you okay ? :')
+# if question1 == 'True' :
+#     print('please get a life')
+# else: 
+#     print('do you have pain')
+#     question2 = input('do you have pain ? :')
+#     if question2 == 'False' :
+#         print('unable to diagose now')
+#     else:
+#         print('did you sleep well')
+#         question3 = input('did you sleep well " :')
+#         if question3 == 'False' :
+#             print('try to sleep')
+#         else:
+#             print('have you done hardwork')
+#             question4 = input('have you done hardwork ? :')
+#             if question4 == 'True' :
+#                 print('try to sleep')
+#             else:
+#                 print('do you have a fever')
+#                 question5 = input('do you have a fever ? :')
+#                 if question5 == 'False' :
+#                     print('inconclusive please see a doctor')
+#                 else:
+#                     print('are you vomitting')
+#                     question6 = input('are you vomitting ? :')
+#                     if question6 == 'False' : 
+#                         print('take some anti-malaria')
+#                     else:
+#                         print('please see a doctor')
+
+            
+        
+    
+
+
+   
