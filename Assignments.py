@@ -31,3 +31,30 @@
 #     print("you won")
 # else :
 #     print("try again")
+
+# import random
+# a,b = random.randint(1,6), random.randint(1,6)
+# c,d = random.randint(1,6), random.randint(1,6)
+# e,f = random.randint(1,6), random.randint(1,6)
+# print("play this game with just 3 tries only ")
+# input("press enter to roll : ")
+# if a ==6 and b ==6:
+#         print(a,b)
+#         print("yesss you won!!!")
+# else:
+#         print(a,b)
+#         print("you have two tries left")
+#         input("press enter to roll : ")
+#         if c ==6 and d ==6:
+#                 print(c,d)
+#                 print("yess you won!!!")
+#         else:
+#                 print(c,d)
+#                 print("you have one left tries")
+#                 input("press enter to roll : ")
+#                 if c ==6 and d ==6:
+#                         print(e,f)
+#                         print("yesss you won")
+#                 else:
+#                         print(e,f)
+#                         print("game over!!!")
