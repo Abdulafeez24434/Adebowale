@@ -14,7 +14,8 @@
 # names = [("Shade", "f"), ("Muyiwa","m"),("Tayo","m"), ("Kemi","f")]
 # saluted_names = map(lambda x : " Mr " +x[0] if x [1] == "m" else " Mrs " +x[0], names)
 # print(list(saluted_names))
-        # ASSIGNMENT 2
+
+                # ASSIGNMENT 2
 # three_friends = ["Shola", "Ayo", "Tunde"]
 # friends_no = (len(three_friends))
 # candies = int(input("number of candies : "))
@@ -22,7 +23,8 @@
 # remainder = int(candies % 3)
 # statement = f'number of candy to be shared is : {g}\nnumber of candies to be crushed : {remainder}'
 # print(statement)
-        # ASSIGNMENT 3
+
+                # ASSIGNMENT 3
 # import random
 # dice1 = random.randint (1,6)
 # dice2 = random.randint (1,6)
@@ -32,6 +34,7 @@
 # else :
 #     print("try again")
 
+                # BUILDING A DICE GAME
 # import random
 # a,b = random.randint(1,6), random.randint(1,6)
 # c,d = random.randint(1,6), random.randint(1,6)
@@ -58,3 +61,47 @@
 #                 else:
 #                         print(e,f)
 #                         print("game over!!!")
+
+
+                # BUILDING A DICE GAME
+# import random
+# for i in range(5):
+#         dice1 = random.randint(1,6)
+#         dice2 = random.randint(1,6)
+#         print("dice1", dice1, "dice2", dice2)
+#         if dice1 ==dice2 and dice1 ==6:
+#                 print("Yeah!!! you won")
+                
+#                 break
+#         else:
+#                 print("ooops! lost")
+#         input("press enter to try again")
+
+
+                # BUILDING A MULTIPLICATION TABLE
+# for i in range(1,5):
+#         for n in range(1,5):
+#                 print(f"{n}*{i} = {n*i}".center(12), end = "\t")
+#         print("\n")
+
+
+                # BUILDING A TIMER
+# import time
+# boom = int(input("count"))
+# while boom > 0:
+#         time.sleep(1)
+#         print(boom, "\r", end ="")
+#         boom -=1
+# print("BLAST OFF!")
+
+                # BUILDING A TIMER WITH SOUND
+# import time
+# import winsound
+
+# sound = winsound.Beep
+# for i in reversed(range(20)):
+#         time.sleep(1)
+#         print(i, "\r", end ="")
+#         sound(500,1000)
+# else:
+#         sound(1000,8000)
