@@ -510,3 +510,224 @@
 #     print(x[n], y[n])
 #     n+=1
 
+# mylist = [1,2,3,4,5,6]
+# print(mylist)
+
+# name = "shalewa"
+# my_second_list = list(name)
+# print(my_second_list)
+
+# products = "shoes,bags,rings,shirts"
+# my_third_list = (products).split(",")
+# print(my_third_list)
+
+# # my_third_list.append("shorts")
+# attempts = 5
+# while True:
+#     already_counted = []
+#     for item in my_third_list:
+#         if item not in already_counted:
+#             occurences = my_third_list.count(item)
+#             already_counted.append(item)
+#             print(item, occurences)
+
+#     action = input("What would you like to do : ")
+
+#     if action == "add":
+#         for item in my_third_list:
+#             occurences = my_third_list.count(item)
+#             print(item, occurences)
+            
+#         new_prop = input("Enter a new prop : ")
+#         my_third_list.append(new_prop)
+#         print(my_third_list)
+
+#     elif action == "rem":
+#         new_prop = input("Enter a prop to remove : ")
+#         my_third_list.remove(new_prop)
+#         print(my_third_list)
+    
+#     attempts -= 1
+#     if attempts == 0:
+#         print("You have run out of attempts...!!")
+#         break
+
+# import random
+# random_nums = []
+# for i in range(20):
+#     round_num = random.randint(1,5)
+#     random_nums.append(round_num)
+# print(random_nums)
+    
+# already_counted = []
+# for item in random_nums:
+#     if item not in already_counted:
+#         occurences = random_nums.count(item)
+#         already_counted.append(item)
+#         print(item, occurences)    
+
+# word = "shayo"
+# cap_word = [x.upper() for x in word]
+# print(cap_word)
+
+# q = [1,2,3,4,5,6,7]
+# squared = [x**2 for x in q]
+# print(squared)
+
+# my_bio = {"Name": 'afeez', "Age": "21", "Sex":'Male'}
+
+# print(my_bio['Name'].upper(), "is", my_bio["Age"], "and", "is", my_bio["Sex"].lower())
+
+# my_bio["hobby"] = "Music"
+# print(my_bio.keys())
+# print(my_bio)
+
+# print(my_bio["hobby"])
+# my_hobby = my_bio.get("hobby")
+# print(my_hobby)
+
+# my_strenght = my_bio.get("names", "keys does not exit.!!")
+# print(my_strenght)
+# my_bio['age'] = 30
+# print(my_bio)
+# del my_bio["age"]
+# print(my_bio)
+
+# new_num = dict(
+#             (
+#                 (1, [2,3,"name"]),
+#                 (2, 3),
+#                 (4,1)
+#             )
+#             )
+# print(new_num)
+
+# risky = "risky_lyrics"
+# bsg = "bsg_lyrics"
+
+# file = open(f"{risky}.txt", "r")
+
+# data = file.readlines()
+# lyrics_dict = {}
+# line_num = 1
+# lyrics_dict[risky] = {}
+
+# for line in data:
+#     # print(line)
+#     lyrics_dict[line_num] = line
+#     line_num+=1
+# file.close()
+
+# file = open(f"{bsg}.txt", "r")
+
+# data = file.readlines()
+# line_num = 1
+# lyrics_dict[bsg] = {}
+
+# for line in data:
+#     # print(line)
+#     lyrics_dict[bsg][line_num] = line
+#     line_num+=1
+# file.close()
+
+# print(lyrics_dict.Keys())
+
+# while True:
+#     requested_song = int(input("please what line would you like to get: "))
+#     print(lyrics_dict.keys())
+#     requested_line = int(input("please what line would you like to get: "))
+#     print(lyrics_dict[requested_song][requested_line])
+
+# import requests
+# import matplotlib.pyplot as plt
+
+# url = "http://checklight.pythonanywhere.com/streets"
+# response = requests.get(url)
+# data = response.json()
+# print(data.keys())
+
+# print(type(data["streets"]))
+
+# streets = data["streets"]
+# for street in streets:
+# #     print(type(street))
+# #     print(street.keys())
+# #     print(street.get("name").center(20), "-", street.get("last_no_light").center(20), "-", street.get("lga"))
+# #     print("\n\t ----------TIMELINES----------\n")
+#     timelines = street.get("history").get("time_line")
+# #     for timeline in timelines:
+# #         status = "Up Nepa" if timeline.get("status") == 1 else "Down Nepa"
+# #         period = round(timeline.get("period")/3600,1)
+# #         time = timeline.get("time")
+# #         print("\t", str(time).center(12), (str(period)+"hours").center(12), str(status).center(12), sep = " | ")
+
+# daily_supply = street.get("history").get("daily_supply")
+# print(daily_supply)
+
+# labels = daily_supply["labels"]
+# values = daily_supply["values"]
+
+# plt.bar(labels, values)
+# plt.title(street.get("name"))
+# plt.show()
+
+# import requests
+# url = "http://checklight.pythonanywhere.com/get_readings/1x0d001/5/"
+# response = requests.get(url)
+# data = response.json()
+# print(data.keys())
+# streets = data["streets"]
+# count = []
+# for street in streets:
+#     # print("\n", street.get("time").center(12), " | ", street.get("status"))
+#     if (street.get("status")) == 0:
+#         print("\n", street.get("time").center(12), " | ", street.get("status"))
+#         count.append(street.get("status"))
+# print(count)
+# print(len(count))
+
+# import requests
+# url = "http://checklight.pythonanywhere.com/get_readings/1x0d001/5/"
+# response = requests.get(url)
+# data = response.json()
+# streets = data["streets"]
+# days = {}
+
+# for street in streets:
+#     status = street["status"]
+#     time = street["time"]
+#     day = time[5:7]
+
+#     if status == 0:
+#         if day not in days:
+#             days[day] = 0
+#         days[day] += 1
+#         print(day, status)
+    
+# print(days)
+
+# import requests
+# devices = ["1x0d001", "1x0d002", "1x0d003", "1x0d004"]
+# all_devices ={}
+
+# for device in devices:
+#     url = f"http://checklight.pythonanywhere.com/get_readings/{device}/12/"
+
+#     response = requests.get(url)
+#     data = response.json()
+
+#     streets = data["streets"]
+#     days = {}
+
+#     for street in streets:
+#         status = street["status"]
+#         time = street["time"]
+#         day = time[5:7]
+
+#         if status == 0:
+#             if day not in days:
+#                 days[day] = 0
+#             days[day] += 1
+#             # print(day, status)
+#     all_devices[device] = days
+# print(all_devices)
