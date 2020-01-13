@@ -105,3 +105,65 @@
 #         sound(500,1000)
 # else:
 #         sound(1000,8000)
+
+                # ASSIGNMENT 3
+# for i in range(333):
+#         if str(i * 3) == str(i)[-1]*3:
+#                 print(i)
+
+
+# import citylist
+# import requests
+# import time
+# import datetime
+
+# cities = citylist.citylist
+
+# requested_city = input("Please enter city to check \n: ").lower()
+
+# for city in cities:
+#         if requested_city in city["name"].lower():
+#                 print(city["name"], city["country"])
+
+# requested_country = input("Please enter country code \n: ").lower()
+# for city in cities:
+#         if requested_city in city["name"].lower() and requested_country.lower() == city["country"].lower():
+#                 print(city["name"], city["country"], city["id"])
+#                 city_id = city["id"]
+#                 break
+
+# api_key = "4367c3e9427ea2d375c0992fda08bb2"
+# response = requests.get(f" http://api.openweather.org/data/2.5/forecast?id={city_id}&APPID={4367c3e9427ea2d375c0992fda08bb2}")
+# data = response.json()
+
+# for forecast in data["list"]:
+#         print(forecast["dt_txt"])
+#         print(forecast["main"]["temp"])
+#         print(forecast["weather"][0]["description"])
+#         print()
+
+#                       HOW TO GENERATE TWO RAND NUMBER LIST--ASSGN 1
+# import random
+
+# def gen_rand_nums(num_of_list, rand_range, sample_size):
+#         rand_nums = []
+#         for _ in range(num_of_list):
+#                 rand_list = [random.randint(0, rand_range) for _ in range(sample_size)]
+#                 rand_nums.append(rand_list)
+#         return rand_nums
+# rand_nums = gen_rand_nums(3,10,20)
+# print(rand_nums)
+
+#                    HOW TO SOLVE FOR MEAN & VARIANCE OF MEAN--ASSGN 2
+# def mean_n_variance(sample):
+#         mean = sum(sample)/ len(sample)
+#         x_bar = [i - mean for i in sample]
+#         variance = (sum(x_bar)**2)/ (len(sample)-1)
+#         return{"variance": variance, "mean": mean}
+
+# def solve(num_of_list, rand_range, sample_size):
+#         random_nums = gen_rand_nums(num_of_list, rand_range, sample_size)
+#         for sample in random_nums:
+#                 variance_val = mean_n_variance(sample)
+#                 print(variance_val)
+# solve(3,10,20) 

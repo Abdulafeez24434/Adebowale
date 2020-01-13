@@ -14,5 +14,3 @@ print(fullname)
 
 comment = f"Hello {name1} {surname1},You were born in {2019 -int(age)}, you come from {state},You love  {hobbies}, You schooled in {school} . "
 print(comment)
-
-# edited by bolaji
