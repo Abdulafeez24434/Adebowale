@@ -1005,27 +1005,45 @@
 # # print(len(file.readlines())-1)
 
 
-                #####    SQL    #####
-import pymysql.cursors
+#                       ####    SQL    #####
+#                 ####### CREATE PRODUCT TABLE  ######
 
-connection = pymysql.connect(host = 'localhost',
-                            user = 'root',
-                            password = '',
-                            db = 'my_db',
-                            charset = 'utf8mb4',
-                            cursorclass=pymysql.cursors.DictCursor)
+# import pymysql.cursors
 
-############################################ INSERT SINGLE USER
-with connection.cursor() as cursor:
-    #create a new record
-    sql_cmd = 'INSERT into student (f_name, l_name, age, address,email, salary) values ("lateef", "desginwork", 26, "bariga, lagos", "all4lateef@gmail.com", 600000)'
+# connection = pymysql.connect(host = 'localhost',
+#                             user = 'root',
+#                             password = '',
+#                             db = 'my_db',
+#                             charset = 'utf8mb4',
+#                             cursorclass=pymysql.cursors.DictCursor)
 
-    cursor.execute(sql_cmd)
-    connection.commit()
-print(sql_cmd)
+# with connection.cursor() as cursor:
+#     #create a new record
 
+#     sql_cmd = f'create table product (id int(3) AUTO_INCREMENT PRIMARY KEY NOT NULL, name varchar(30), price int(5), weight float(5,5))'
 
+#     cursor.execute(sql_cmd)
+#     connection.commit()
 
+#               ###### INSERT SINGLE USER  ########
+# import pymysql.cursors
+
+# connection = pymysql.connect(host = 'localhost',
+#                             user = 'root',
+#                             password = '',
+#                             db = 'my_db',
+#                             charset = 'utf8mb4',
+#                             cursorclass=pymysql.cursors.DictCursor)
+
+# with connection.cursor() as cursor:
+#     #create a new record
+#     sql_cmd = 'INSERT into student (f_name, l_name, age, address,email, salary) values ("lateef", "desginwork", 26, "bariga, lagos", "all4lateef@gmail.com", 600000)'
+
+#     cursor.execute(sql_cmd)
+#     connection.commit()
+# print(sql_cmd)
+
+#                   ###### INSERT RANDOM USER  ########
 # import pymysql.cursors
 
 # connection = pymysql.connect(host = 'localhost',
@@ -1054,3 +1072,35 @@ print(sql_cmd)
 #         cursor.execute(sql_cmd)
 #         connection.commit()
 # print(splitted_names)
+# 
+
+#                       ###### CREATE ORDER TABLE   #######
+import pymysql.cursors
+
+connection = pymysql.connect(host = 'localhost',
+                            user = 'root',
+                            password = '',
+                            db = 'my_db',
+                            charset = 'utf8mb4',
+                            cursorclass=pymysql.cursors.DictCursor)
+# with connection.cursor() as cursor:
+    #create a new record
+    # sql_cmd =  f'create table orders (person_id int, FOREIGN KEY(person_id) REFERENCES person(person_id), product_id int, FOREIGN KEY(product_id) REFERENCES product(id), order_date Date, qty int(5))'
+
+    # cursor.execute(sql_cmd)
+    # connection.commit()
+
+products = ["apple", "orange", "shoes", "knife", "cream"]
+prices = [10, 4, 50, 10, 20]
+weights = [5, 6, 7, 8, 8]
+
+with connection.cursor() as cursor:
+    for items in zip(products, prices, weights):
+        pname = items[0]
+        pprice = items[1]
+        pweights = items[2]
+
+        sql_cmd = f'INSERT INTO product (name, price, weight) values ("{pname}", "{pprice}", "{pweights}")'
+
+        cursor.execute(sql_cmd) 
+        connection.commit()
