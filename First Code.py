@@ -731,3 +731,326 @@
 #             # print(day, status)
 #     all_devices[device] = days
 # print(all_devices)
+
+# import citylist
+# import requests
+# data = citylist.citylist
+
+
+# user_city = input("Please enter city name : ")
+# user_country = input("Please enter country name : ")
+
+# def fetch_id(user_city, user_country, data):
+#     city_id = ""
+
+#     for city in data:
+#         if city["name"] == user_city and city["country"] == user_country:
+#             city_id = city["id"]
+#             print(city["name"], city["country"], city["id"], "\n\n\n\n\n")
+    
+#     return city_id
+
+# id = fetch_id(user_city, user_country, data)
+# print(id)
+# api_key = "336b102582e7d317c464efd5e6ac86aa"
+# url = f"http://api.openweathermap.org/data/2.5/forecast?id={id}&APPID={api_key}"
+
+# r = requests.get(url)
+# # print(r.json())
+# file_name = "weather_data.py"
+
+# file = open(file_name, "w")
+# print(r.json(), file= file)
+# print(r.json())
+
+
+#                       #####  OBJECT ORIENTED PROGRAMME  #####
+
+# class Animal:
+    
+#     status = "Animate" # CLASS ATTRIBUTE
+
+#     def __init__(self, limbs, covering, food_type, name, habitat, family ):
+#         self.limbs = limbs
+#         self.covering = covering
+#         self.food_type = food_type
+#         self.habitat = habitat
+#         self.family = family
+#         self.__name = name ##__NAME IS AN ENCAPSULATED ATTRIBUTE
+
+#     def set_Name(self, new_name): #SETTER FOR NAME BECAUSE NAME IS ENCAPSULATED
+#         self._name = new_name
+
+#     def get_Name(self):
+#         return self.__name
+
+
+
+
+
+# billy = Animal(name = "Billy", limbs = 4, covering = "fur", habitat = "Terrestrial", food_type = "Omnivore", family = "Dog")
+
+# rhodes = Animal(name = "Rhodes", limbs = 4, covering = "Feathers", habitat = "Aboreal", food_type = "Omnivore", family = "Bird")
+
+
+
+# print(type(billy))
+# print(billy.status)
+# print(billy.food_type)
+# print(billy.covering)
+
+
+#  class account:
+    #     #  class attribute
+#     type = 'parent'
+#     def __init__(self, acct_no_param, name_param):
+#         # insatnce attribute
+#         self.acct_no = acct_no_param
+#         self.name = name_param
+#         self.bal = 0
+
+#     def deposit(self, amount):
+#         self.bal +=(amount)
+#         print(f"successfully added {amount} to {self.name} balance, \nNew balnce = {self.bal}\n")
+#     def withdrawal(self, amount):
+#         self.bal -=amount
+#         print(f'successfully withdraws {amount} from {self.name} balance, \n New balance = {self.bal}\n')
+
+
+# my_acct = account(acct_no_param ="301229409", name_param = "Bruno")
+# my_acct2 =account(acct_no_param = "301224300", name_param = "salami")
+    
+    
+# print(my_acct.name)
+# print(my_acct.acct_no)
+# print(my_acct.type)
+# (my_acct.deposit(5000))
+# (my_acct.withdrawal(1000))
+
+# print(my_acct2.name)
+# print(my_acct2.acct_no)
+# print(my_acct2.type)
+# (my_acct2.deposit(12000))
+# (my_acct2.withdrawal(1000))
+
+# class current_acct (account):
+#     type ="current"
+
+#     def __init__(self, acct_no_param, name_param, dollar_bal = 0 ):
+#         account.__init__(self, acct_no_param, name_param)
+#         self.dollar_bal = dollar_bal
+
+# class savings_acct(account):
+#     type = "savings"
+#     def __init__(self, acct_no_param, name_param, interests = 0.5 ):
+#         account.__init__(self, acct_no_param, name_param)
+#         self.interests = interests
+
+# # my_curr_acct = current_acct(acct_no_param = "30129409", name_param = 'john')
+# my_savings_acct = savings_acct(acct_no_param = "301229409", name_param = "sule")
+# # print(my_curr_acct.name)
+# # print(my_curr_acct.type)
+# # print(my_curr_acct.dollar_bal)
+
+# print(my_savings_acct.name)
+# print(my_savings_acct.type)
+# print(my_savings_acct.interests)
+
+
+# filename = "application_data.csv"
+# mode = "r"
+# file = open(filename, mode)
+# data = file.readlines()
+# names_of_columns = data[0].replace(" ", " ")
+
+# class Application: 
+#     def __init__(self, name_of_columns,  number_of_columns, number_of_rows, name_of_numeric_columns, name_of_text_columns):
+#         self.name_of_columns = name_of_columns
+#         print(names_of_columns)
+
+# l = ('a,b,c')
+# n= (1,2,3)
+
+# ln = zip(l,n)
+# print(ln)
+
+# import datetime, random, json
+
+# def generate_acct_no():
+#     no = [str(random.randint(0,9)) for i in range(10)]
+#     acct_no = "".join(no)
+
+#     return acct_no
+        
+# class Customer:
+
+#     def __init__(self, name = "none", username = str(datetime.datetime.now()), password = "11111111"):
+#         self.name = name
+#         self.username = username
+#         self.password = password
+#         self.creation_date = str(datetime.datetime.now())
+
+#     def details(self):
+#         print(self.name)
+#         print(self.username)
+#         print(self.creation_date)
+#         return "this is my empty return"
+
+
+# class Account:
+
+#     def __init__(self, type, customer, account_no = generate_acct_no()):
+#         self.customer = customer
+#         self.__balance = 0
+#         self.creation_date = str(datetime.datetime.now())
+#         self.type = type
+#         self.account_no = account_no 
+
+#     def get_balance(self):
+#         print(self.__balance)
+    
+#     def details(self):
+#         print(self.customer.name)
+#         print(self.customer.username)
+#         print(self.customer.creation_date)
+#         print(self.account_no)
+
+#     def save(self):
+#         Storage.store(type = self.type, account_no = self.account_no, acct_creation_date = self.creation_date, name = self.customer.name, username = self.customer.username, password = self.customer.password, cust_creation_date = self.customer.creation_date )
+
+
+
+# class Storage():
+
+#     @staticmethod
+#     def store(**kwargs):
+        
+#         data = json.dumps(kwargs)
+#         file = open("acct_db", "w")
+#         file.write(data)
+
+# cust_1 = Customer("afeez", "boss_of_game", "qwerty")
+# acct1 = Account("savings", cust_1)
+
+# acct1.details()
+# acct1.save()
+
+# class Table:
+    
+#     def __init__(self, filename):
+
+#         self.filename  = filename
+
+#         col_data = self.get_col_names()
+#         row_data = self.get_num_rows()
+
+#         self.col_names = col_data[1]
+#         self.col_count = col_data[0]
+#         self.row_count = row_data
+
+
+#     def get_col_names(self):
+
+#         col_row = open(self.filename, "r").readlines()[0]
+#         col_names = col_row.split(",")
+
+#         print("COLUMNS IN FILE : ")
+#         for name in (col_names):
+#             print(f"\t{name}")
+
+#         num_of_cols = len(col_names)
+        
+#         return num_of_cols, col_names
+
+#     def get_num_rows(self):
+
+#         num_rows = len(open(self.filename, "r").readlines())-1
+
+#         return num_rows
+
+#     def get_numeric_cols(self):
+
+#         lines = open(self.filename, "r").readlines()
+#         lines.pop(0)
+
+#         list_of_tuples = map(lambda string: string.split(","), lines)
+
+#         unzipped_data = zip(*list_of_tuples)
+
+#         text_col = []
+#         num_col = []
+#         count = 0
+
+#         for line in unzipped_data:
+            
+#             if not any(map(lambda x: x.replace(".", "").isnumeric(), line)):
+#                 num_col.append(self.col_names[count])
+#             else:
+#                 text_col.append(self.col_names[count])
+
+
+#             count += 1
+
+#         print(text_col)
+#         print(num_col)
+            
+
+# new_data = Table("DNMM_CDD_18C.csv")
+# print(new_data.filename)
+# new_data.col_names
+# print(new_data.row_count)
+# new_data.get_numeric_cols()
+
+# # file = open("DNMM_CDD_18C.csv", "r")
+# # print(len(file.readlines())-1)
+
+
+                #####    SQL    #####
+import pymysql.cursors
+
+connection = pymysql.connect(host = 'localhost',
+                            user = 'root',
+                            password = '',
+                            db = 'my_db',
+                            charset = 'utf8mb4',
+                            cursorclass=pymysql.cursors.DictCursor)
+
+############################################ INSERT SINGLE USER
+with connection.cursor() as cursor:
+    #create a new record
+    sql_cmd = 'INSERT into student (f_name, l_name, age, address,email, salary) values ("lateef", "desginwork", 26, "bariga, lagos", "all4lateef@gmail.com", 600000)'
+
+    cursor.execute(sql_cmd)
+    connection.commit()
+print(sql_cmd)
+
+
+
+# import pymysql.cursors
+
+# connection = pymysql.connect(host = 'localhost',
+#                             user = 'root',
+#                             password = '',
+#                             db = 'my_db',
+#                             charset = 'utf8mb4',
+#                             cursorclass=pymysql.cursors.DictCursor)
+
+
+# with connection.cursor() as cursor:
+#     import random 
+
+#     names = open('randomnames.txt', 'r').read()
+#     emails = ['@gmail.com', '@yahoo.com', '@live.com']
+#     splitted_names = names.splitlines()
+#     for name in splitted_names:
+#         fname, lname = name.split()
+#         random_email = random.choice(emails)
+#         email = f"{fname[:3]}{lname[:3]}{random_email}"
+#         age = random.randint(10, 50)
+#         salary = random.randint(100000, 500000)
+#         print(f"firstname -  {fname},  lastname -  {lname},  Age -  {age},  email-  {email},  salary - {salary}")
+#         sql_cmd = f'INSERT into person (f_name, l_name, age, address,email, salary) values ("{fname}", "{lname}", {age} ,"abuja",  "{email}", "{salary}")'
+        
+#         cursor.execute(sql_cmd)
+#         connection.commit()
+# print(splitted_names)
